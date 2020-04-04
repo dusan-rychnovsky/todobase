@@ -1,5 +1,3 @@
-using System;
-
 namespace todobase.Models
 {
     public class ErrorViewModel
