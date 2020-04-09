@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "todobase", "todobase\todoba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "todobase.tests", "tests\todobase.tests\todobase.tests.csproj", "{ABC22FFE-42CB-46E3-99E4-9E23153F37A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todobase.integrationtests", "todobase.integrationtests\todobase.integrationtests.csproj", "{08E8431D-1247-4937-A566-9A518C384F57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ABC22FFE-42CB-46E3-99E4-9E23153F37A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABC22FFE-42CB-46E3-99E4-9E23153F37A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABC22FFE-42CB-46E3-99E4-9E23153F37A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E8431D-1247-4937-A566-9A518C384F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E8431D-1247-4937-A566-9A518C384F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E8431D-1247-4937-A566-9A518C384F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E8431D-1247-4937-A566-9A518C384F57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
