@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using todobase.Models;
 
 namespace todobase
 {
@@ -18,6 +20,10 @@ namespace todobase
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var sqlConnectionString = "";
+            services.AddDbContext<AppDbContext>(
+                options => options.UseSqlServer(sqlConnectionString));
+
             services.AddControllersWithViews();
         }
 
