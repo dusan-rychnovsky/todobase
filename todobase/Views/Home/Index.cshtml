@@ -1,5 +1,13 @@
 ﻿@{
+    @model Todo[]
     ViewData["Title"] = "Home Page";
 }
 
-Hello World!
+<h1>Todos:</h1>
+
+<ul>
+@foreach (var todo in Model)
+{
+    <li>@todo.Label</li>
+}
+</ul>

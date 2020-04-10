@@ -21,7 +21,7 @@ namespace todobase.integrationtests
             response.EnsureSuccessStatusCode();
 
             var content = await response.Content.ReadAsStringAsync();
-            Assert.Contains("Hello World!", content);
+            Assert.Contains("Todos:", content);
         }
     }
 }

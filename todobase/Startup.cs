@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using todobase.Models;
+using Microsoft.Data.Sqlite;
 
 namespace todobase
 {
@@ -17,12 +18,14 @@ namespace todobase
 
         public IConfiguration Configuration { get; }
 
+        public static SqliteConnection DbConnection { get; set; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var sqlConnectionString = "";
+            var dbConnection = DbConnection ?? new SqliteConnection("DataSource=:memory:");
             services.AddDbContext<AppDbContext>(
-                options => options.UseSqlServer(sqlConnectionString));
+                options => options.UseSqlite(dbConnection));
 
             services.AddControllersWithViews();
         }
