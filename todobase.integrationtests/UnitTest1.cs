@@ -28,8 +28,8 @@ namespace todobase.integrationtests
                 await dbContext.Todos.AddRangeAsync(
                     new[]
                     {
-                        new Todo { TodoId = "1", Label = "Do the vacuuming." },
-                        new Todo { TodoId = "2", Label = "Feed the cat." }
+                        new Todo { TodoId = Guid.NewGuid(), Label = "Do the vacuuming." },
+                        new Todo { TodoId = Guid.NewGuid(), Label = "Feed the cat." }
                     });
                 await dbContext.SaveChangesAsync();
             }
