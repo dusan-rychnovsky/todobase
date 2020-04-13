@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "todobase", "todobase\todoba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "todobase.tests", "tests\todobase.tests\todobase.tests.csproj", "{ABC22FFE-42CB-46E3-99E4-9E23153F37A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todobase.integrationtests", "todobase.integrationtests\todobase.integrationtests.csproj", "{08E8431D-1247-4937-A566-9A518C384F57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "todobase.integrationtests", "todobase.integrationtests\todobase.integrationtests.csproj", "{08E8431D-1247-4937-A566-9A518C384F57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82A7BF0E-8BE5-43C1-94C9-5F950AC4B781}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
