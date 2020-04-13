@@ -28,13 +28,7 @@ jobs:
       
     - name: dotnet publish
       run: dotnet publish todobase/todobase.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
-    
-    - name: Update database
-      run: |
-        dotnet tool install --global dotnet-ef
-        dotnet tool restore
-        dotnet ef database update -p todobase/todobase.csproj
-     
+  
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v1
       with:
