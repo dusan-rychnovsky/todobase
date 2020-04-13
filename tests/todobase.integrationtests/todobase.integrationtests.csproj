@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\todobase\todobase.csproj" />
+    <ProjectReference Include="..\..\todobase\todobase.csproj" />
   </ItemGroup>
 
 </Project>
