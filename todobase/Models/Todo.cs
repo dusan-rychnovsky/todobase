@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace todobase.Models
+﻿namespace todobase.Models
 {
     public class Todo
     {
-        public Guid TodoId { get; set; }
+        public long TodoId { get; set; }
 
         public string Label { get; set; }
     }

@@ -10,7 +10,8 @@ namespace todobase.Migrations
                 name: "Todos",
                 columns: table => new
                 {
-                    TodoId = table.Column<string>(nullable: false),
+                    TodoId = table.Column<long>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Label = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
