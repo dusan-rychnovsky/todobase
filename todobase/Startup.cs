@@ -23,9 +23,18 @@ namespace todobase
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var dbConnection = DbConnection ?? new SqliteConnection("DataSource=:memory:");
-            services.AddDbContext<AppDbContext>(
-                options => options.UseSqlite(dbConnection));
+            if (DbConnection != null)
+            {
+                services.AddDbContext<AppDbContext>(
+                    options => options.UseSqlite(DbConnection));
+            }
+            else
+            {
+                var dbConfig = Configuration.GetSection("Db");
+                var connectionString = dbConfig.GetSection("ConnectionString").Value;
+                services.AddDbContext<AppDbContext>(
+                    options => options.UseSqlServer(connectionString));
+            }
 
             services.AddControllersWithViews();
         }
