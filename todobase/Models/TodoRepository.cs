@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace todobase.Models
+namespace todobase
 {
     public class TodoRepository
     {

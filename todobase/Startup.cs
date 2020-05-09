@@ -4,8 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using todobase.Models;
 using Microsoft.Data.Sqlite;
+using Microsoft.AspNetCore.Identity;
 
 namespace todobase
 {
@@ -36,6 +36,10 @@ namespace todobase
                     options => options.UseSqlServer(connectionString));
             }
 
+            services.AddDefaultIdentity<IdentityUser>(
+                options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<AppDbContext>();
+
             services.AddControllersWithViews();
         }
 
@@ -57,6 +61,7 @@ namespace todobase
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

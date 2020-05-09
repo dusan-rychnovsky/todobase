@@ -1,4 +1,4 @@
-﻿namespace todobase.Models
+﻿namespace todobase
 {
     public class Todo
     {
